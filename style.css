@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(120deg, #f6d365, #fda085);
+  min-height: 100%;
+}
+
+header {
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form input,
+form button {
+  padding: 0.6rem 0.5rem;
+  font-size: 1.3rem;
+  border: none;
+  background: #ffffff;
+  outline: none;
+}
+
+form button {
+  color: #f36139;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: 250ms ease-in;
+}
+
+form button:hover {
+  background-color: #f36139;
+  color: #ffffff;
+}
+
+.todo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-list {
+  width: 25%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: #ffffff;
+  color: #000;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.complete-btn,
+.trash-btn {
+  background-color: #f36139;
+  color: #ffffff;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.complete-btn:focus,
+.trash-btn:focus {
+  outline: none;
+}
+
+.complete-btn {
+  background-color: #0c6b0f;
+}
+
+.todo-item {
+  padding: 0rem 0.3rem;
+}
+
+.fa-check,
+.fa-trash {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+  transition: text-decoration 250ms ease-in, opacity 200ms ease-in;
+}
+
+.animate {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+  transition: 250ms ease-in;
+}
+
+.select {
+  margin: 0.8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.select::after {
+  content: "\25BC";
+  background-color: #f36139;
+  position: absolute;
+  color: #ffffff;
+  top: 50%;
+  right: 0;
+  padding: 0.6rem 0.5rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.select:hover::after {
+  color: #f36139;
+  background-color: #ffffff;
+  transition: 250ms ease-in;
+}
+
+.select select {
+  font-family: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  width: 10rem;
+  font-size: 1rem;
+  color: #f36139;
+  cursor: pointer;
+  padding: 0.6rem 0.5rem;
+}
